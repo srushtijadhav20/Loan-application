@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link  rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+   
+       
+        
+        <h1>Loan Application</h1>
+        <form  name="loanapp" onsubmit="">
+        <div class="container">
+          
+            <div class="row">
+              <div class="col-25">
+                <label for="fname">Full Name</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="fname" name="fname" placeholder=" Enter Your name.." onchange="">
+               
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-25">
+                <label for="email">Email</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="email" name="email" placeholder="Enter Email Id.."   >
+              </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                  <label for="pan">PAN</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="pan" name="pan" placeholder="Enter PAN number.." onchange="validpan()">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="loan">Loan Amount</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="loan" name="loan" placeholder="Enter Loan amount.." onkeydown="convertnum()">
+                   <p id="words"></p>
+                </div>
+              </div>
+              <br><br>
+              <div class="row">
+                <div class="col-25">
+                 Captcha
+                </div>
+              <div class="col-25">
+              <body onload="DrawCaptcha();">
+                
+                        <input type="text" id="txtCaptcha" 
+                            style=" text-align:center; 
+                            font-weight:bold; font-family:Modern" />
+                        <input type="button" id="btnrefresh" value="Refresh" onclick="DrawCaptcha();" />
+                   
+                    
+                        <input type="text" id="txtInput"/>    
+                    
+                        <input id="Button1" class="button-submit1"  type="button" value="Check" onclick="alert(ValidCaptcha());"/>
+                        
+                
+            </div>
+            </div>
+                
+            
+            <div class="row">
+              <input type="button" value="Submit" id="insubmit"  class="button-submit"
+              onclick="fun1(),fun2(),validate()">
+             
+             </div>
+          
+        </div>
+      </form>
+
+        
+      
+        
+        
+
+        
+        
+        
+
+    
+</body>
+<script src="main.js"></script>
+<!--<script src="localstorage.js"></script>-->
+
+
+</html>
